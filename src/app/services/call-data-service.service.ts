@@ -41,7 +41,6 @@ export class CallDataServiceService {
   }
 
   public getData(url: string): Observable<any> {
-    debugger;
     return this.http.get(url);
   }
 }
