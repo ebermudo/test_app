@@ -41,8 +41,8 @@ export class HomePage implements OnInit {
 
   public filter(event: string) {
     this.randomsFiltereds = this.randomData.filter((random) => {
-      return (random.id.toString().startsWith(event) || random.id.toString().endsWith(event))
-      || (random.text.toLowerCase().startsWith(event.toLowerCase()) || random.text.toLowerCase().endsWith(event.toLowerCase()));
+      return (random.id.toString().includes(event) || random.id.toString() == event)
+      || (random.text.toLowerCase().includes(event.toLowerCase()));
     });
   }
 }
